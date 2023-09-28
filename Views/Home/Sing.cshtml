@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "_Layout";
+    var pronoun = "his";
+}
+
+<html>
+    <body>
+    @Html.ActionLink("Play Again", "SongForm", "Home")
+    @for (var i = Int32.Parse(@ViewBag.numMonkey); i >= 0;  i--)
+    {
+
+        if (i == 1)
+        {
+            <p>
+                @i little monkey jumping on the bed,<br />
+                He fell off and bumped his head,<br />
+                Mama called the doctor and the doctor said,<br />
+                "Put those monkeys to bed!"
+            </p>
+        }
+        else if (i == 0)
+        {
+            <p>
+                No little monkeys jumping on the bed,<br />
+                None fell off and bumped their head,<br />
+                Mama called the doctor and the doctor said,<br />
+                "Put those monkeys back in bed!"
+            </p>
+        }
+        else
+        {
+            if (i % 2 == 0)
+            {
+                pronoun = "her";
+            }
+            else if (i % 2 == 1)
+            {
+                pronoun = "his";
+            }
+            <p>
+                @i little monkeys jumping on the bed,<br />
+                He fell off and bumped @pronoun head,<br />
+                Mama called the doctor and the doctor said,<br />
+                "No more monkeys jumping on the bed!"
+            </p>
+        }
+        <br/> 
+    }
+</body>
+</html>

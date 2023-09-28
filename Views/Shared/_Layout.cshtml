@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h2>Welcome to my website for Lab 3</h2>
+        <h4>My name is Ngoc Le</h4>
+        @Html.ActionLink("Home", "Index", "Home")&emsp;
+        @Html.ActionLink("Show the song!", "SongForm", "Home")&emsp;
+        @Html.ActionLink("Students", "CreateStudent", "Home")&emsp;
+    </header>
+    <div class="content">
+        @RenderBody()
+    </div>
+    <footer>
+        Footer!
+        Description of what layout does and why do you put the files in these directories
+    </footer>
+</body>
+</html>

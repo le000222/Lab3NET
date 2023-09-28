@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h3>Song Form</h3>
+<form asp-controller="Home" asp-action="Sing" method="post">
+    <p>Enter the number of monkeys between 50 and 100:
+    <input type="number" min="50" max="100" name="numMonkey"/>
+    <input type="submit" value="Sing!" />
+    </p>
+</form>
+
