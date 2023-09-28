@@ -19,7 +19,12 @@
     </div>
     <footer>
         Footer!
-        Description of what layout does and why do you put the files in these directories
+        <br />Step to add css file and _layout:
+        <ul>
+            <li>Create folder web root folder wwwroot and add css file under that folder because in ASP.NET Core, files that are in wwwroot are only files that can be served over an http request</li>
+            <li>Under Views folder, I created a Shared folder which contains _Layout.cshtml file because it makes more sense to create a Shared folder where this _Layout file will be shared among the Views</li>
+        </ul>
+        Layout provides users with a consistent experience as they navigate from page to page and its portion can be reused in View file.
     </footer>
 </body>
 </html>
